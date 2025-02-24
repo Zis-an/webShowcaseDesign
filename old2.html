@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Future Forward Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Space Grotesk', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hero-text {
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-entrance {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+
+    <!-- Animated Navbar -->
+    <nav class="fixed w-full top-0 navbar z-50 shadow-xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-white hover:text-indigo-200 transition-colors">
+                    <span class="text-indigo-300">Innovate</span><span class="text-pink-400">X</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-white">Home</a>
+                    <a href="#about" class="nav-link text-white">Solutions</a>
+                    <a href="#clients" class="nav-link text-white">Clients</a>
+                    <a href="#contact" class="nav-link text-white">Contact</a>
+                    <button class="ml-4 px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:scale-105 transition-transform">
+                        Get Started
+                    </button>
+                </div>
+                
+                <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full object-cover">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-blue-circuits-97.mp4" type="video/mp4">
+        </video>
+        
+        <div class="relative z-10 text-center px-4">
+            <h1 class="hero-text text-6xl md:text-8xl font-bold text-white mb-6 animate-fade-in-up">
+                Transform Your<br>
+                <span class="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">Digital Future</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Harness the power of next-gen technologies to revolutionize your business
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full hover:scale-110 transition-transform">
+                    Start Journey
+                </a>
+                <a href="#about" class="px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white/10 transition-colors">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Slider -->
+    <section id="clients" class="py-16 bg-white/5 backdrop-blur-lg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">
+                Trusted By Industry Leaders
+            </h2>
+            
+            <div class="client-slider">
+                <a href="https://techcorp.com" target="_blank" class="px-4">
+                    <img src="https://logo.clearbit.com/techcrunch.com" alt="Tech Corp" class="h-20 w-20 mx-auto grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://digitalinnovators.com" target="_blank" class="px-4">
+                    <img src="https://logo.clearbit.com/digitalocean.com" alt="Digital Innovators" class="h-20 w-20 mx-auto grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://futuretech.com" target="_blank" class="px-4">
+                    <img src="https://logo.clearbit.com/futurelearn.com" alt="Future Tech" class="h-20 w-20 mx-auto grayscale hover:grayscale-0 transition-all">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Sections -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- Image Left / Text Right -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24 section-entrance">
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1470&auto=format&fit=crop" 
+                         class="rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl"></div>
+                </div>
+                <div class="text-white">
+                    <h2 class="text-4xl font-bold mb-6">AI-Powered Solutions</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Leverage our cutting-edge artificial intelligence platforms to automate processes, 
+                        predict market trends, and enhance decision-making capabilities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Text Left / Image Right -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center section-entrance">
+                <div class="text-white order-1 md:order-2">
+                    <h2 class="text-4xl font-bold mb-6">Blockchain Innovation</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Secure your transactions and revolutionize your business operations with our 
+                        enterprise-grade blockchain solutions.
+                    </p>
+                </div>
+                <div class="relative group order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1470&auto=format&fit=crop" 
+                         class="rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-l from-green-500/20 to-cyan-500/20 rounded-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 py-12 backdrop-blur-lg">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">Careers</a>
+            </div>
+            <p class="text-lg">
+                © 2025 InnovateX. All rights reserved.<br>
+                Shaping the future of technology
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Initialize slick slider
+            $('.client-slider').slick({
+                slidesToShow: 5,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                responsive: [
+                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                    { breakpoint: 640, settings: { slidesToShow: 2 } }
+                ]
+            });
+
+            // Scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('section-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.section-entrance').forEach((element) => {
+                observer.observe(element);
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('.navbar');
+                if(window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg', 'backdrop-blur-lg', 'bg-black/30');
+                } else {
+                    navbar.classList.remove('shadow-lg', 'backdrop-blur-lg', 'bg-black/30');
+                }
+            });
+
+            // Mobile menu toggle
+            $('#menu-toggle').click(() => {
+                $('.md\\:flex').toggleClass('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
